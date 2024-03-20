@@ -1,6 +1,5 @@
 from discord_logger import *
 from discord_functions import get_response
-from variables import SONIC_ID, guild_id, log_webhook_url
 from functions import check_response
 import time
 import random
