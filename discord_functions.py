@@ -55,7 +55,7 @@ def process_message(message):
             # regex to find https://solscan.io/tx/* link from the links variable, jsut the first one
             solscan_link = re.search(r'((https://solscan.io/tx/)([\w\d]+))', links).group(3) if links else None
 
-            send_message_to_discord(f"[{mint_address}](https://solscan.io/tx/{mint_address}) - {solscan_link}", log_webhook_url)
+            send_message_to_discord(f"[{mint_address}](https://solscan.io/account/{mint_address}) - [{solscan_link}](https://solscan.io/tx/{solscan_link})", log_webhook_url)
 
             logging.info(f"ADDRESS: {solscan_link}")
 
