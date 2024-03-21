@@ -80,6 +80,8 @@ def validMicroLamports(hash: str):
             send_message_to_discord(f"**Transaction Confirmed. Data found.**", log_webhook_url, 0x5cd65c)
             return True
 
+        send_message_to_discord(f"**Transaction Confirmed. Data found but not valid. {data}**", log_webhook_url, 0xffa5a5)
+
     # except Exception as e:
     #     print(f"Error: {e}")
     #     send_exception_to_discord(e, log_webhook_url)
